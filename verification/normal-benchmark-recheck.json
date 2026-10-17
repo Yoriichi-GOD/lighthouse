@@ -1,0 +1,110 @@
+{
+  "startedAt": "2026-10-17T16:34:35.931Z",
+  "caveat": "Repeat diagnostic to inspect excerpts for initial matcher misses; this is not independent benchmark data.",
+  "cases": [
+    {
+      "id": "pmjdy-launch-date",
+      "account": 1,
+      "latencyMs": 4854,
+      "sourceCount": 3,
+      "failureCount": 0,
+      "evidenceFound": false,
+      "sources": [
+        {
+          "host": "www.pib.gov.in",
+          "title": "PIB Backgrounder",
+          "excerpts": [
+            "* Launched on August 28, 2014, PMJDY is one of the world’s largest financial inclusion initiatives.\n* Over 56.16 crore bank accounts have been opened under the Pradhan Mantri Jan Dhan Yojana (PMJDY), with total deposits reaching ₹2.67 lakh crore as of mid-August 2025.\n* 56% Jan Dhan accounts belong to women, highlighting the scheme’s role in promoting gender equality in financial access.",
+            "In August 2014, this reality began to change. The Pradhan Mantri Jan Dhan Yojana (PMJDY), launched as National Mission for Financial Inclusion, set out to give every unbanked adult in India a bank account, a financial identity, and access to essential services like credit, insurance, and pensions. Guided by the mission of banking the unbanked, securing the unsecured, funding the unfunded, and serving the unserved and underserved, PMJDY has grown into the largest financial inclusion initiative in the world.",
+            "Recently, the Department of Finance launched a three-month nationwide saturation campaign, effective from 1st July 2025 to 30th September 2025, to bolster the outreach of flagship schemes such as the Pradhan Mantri Jan Dhan Yojana (PMJDY), Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY), Pradhan Mantri Suraksha Bima Yojana (PMSBY), and Atal Pension Yojana (APY). This campaign seeks to achieve comprehensive coverage across all Gram Panchayats (GPs) and Urban Local Bodies (ULBs), ensuring that every eligible citizen is able to avail the intended benefits of these transformative schemes."
+          ]
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes eight years of successful implementation",
+          "excerpts": [
+            "Pradhan Mantri Jan Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes eight years of successful implementation",
+            "Expressing his thoughts for PMJDY on this occasion, Union Minister of State for Finance Dr. Bhagwat Karad said, “Pradhan Mantri Jan Dhan Yojana (PMJDY) has been one of the most far reaching initiatives towards Financial Inclusion not only in India but in the world. Financial Inclusion is among top-most priorities of the Government as it is an enabler for inclusive growth. It provides an avenue to the poor for bringing their savings into the formal financial system, an avenue to remit money to their families besides taking them out of the clutches of the usurious money lenders.”",
+            "Pradhan Mantri Jan Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, Banking/ Savings & Deposit Accounts, Remittance, Credit, Insurance, Pension in an affordable manner."
+          ]
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan-Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes seven years of successful implementation",
+          "excerpts": [
+            "# Pradhan Mantri Jan-Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes seven years of successful implementation",
+            "Minister of State for Finance, Dr. Bhagwat Karad also expressed his thoughts for PMJDY on this occasion. He said “Pradhan Mantri Jan Dhan Yojana (PMJDY) has been one of the most far reaching initiatives towards Financial Inclusion not only in India but in the world. Financial Inclusion is among top-most priorities of the Government as it is an enabler for inclusive growth. It provides an avenue to the poor for bringing their savings into the formal financial system, an avenue to remit money to their families besides taking them out of the clutches of the usurious money lenders.”",
+            "Pradhan Mantri Jan-Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, Banking/ Savings & Deposit Accounts, Remittance, Credit, Insurance, Pension in an affordable manner."
+          ]
+        }
+      ],
+      "failures": []
+    },
+    {
+      "id": "mgnrega-release-as-of-date",
+      "account": 3,
+      "latencyMs": 31019,
+      "sourceCount": 2,
+      "failureCount": 1,
+      "evidenceFound": false,
+      "sources": [
+        {
+          "host": "www.pib.gov.in",
+          "title": "Budgetary allocations for the Mahatma Gandhi National Rural Employment Guarantee Scheme",
+          "excerpts": [
+            "Mahatma Gandhi National Rural Employment Guarantee Scheme (Mahatma Gandhi NREGS) is a demand driven wage employment Scheme and Government is committed to making sufficient fund available in order to meet the demand for work at ground. For the financial year 2024-25, budget allocation of Rs. 86,000 crores have been made at Budget Estimate (BE) stage, which is the highest ever allocation under Mahatma Gandhi NREGS at the Budget Estimate (BE) stage since inception. The details of funds allocation at the Budget Estimate stage, Revised Estimate stage and fund released under Mahatma Gandhi NREGS during the last five financial years and current financial year 2024-25 (as on 28.01.2025) are given below:",
+            "As per the provision of the Mahatma Gandhi National Rural Employment Guarantee Act, the beneficiaries are entitled to get wage payment within 15 days of closure of Muster Roll of the work. Government of India has also issued a detailed Standard Operating Procedure (SOP) to the States to ensure timely wage payment. The Ministry along with the States/UTs has been making concerted efforts for improving the timely payment of wages. States/UTs have been advised to generate pay orders in time. The Ministry has taken various steps to ensure timely payment of wages to workers under the Mahatma Gandhi National Rural Employment Guarantee Scheme (MGNREGS). These include:",
+            "State/UT-wise (including Bihar) details of pending liabilities for wage component under Mahatma Gandhi NREGS as on 27.01.2025 are given at Annexure."
+          ]
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Aadhaar Based Payment Systems under Mahatma Gandhi National Rural Employment Guarantee Scheme ",
+          "excerpts": [
+            "To ensure timely payment of wages to the beneficiaries under Mahatma Gandhi NREGS and to address the issues arising due to frequent changes in bank account numbers of the beneficiaries and subsequent non-updation, it was decided to implement Aadhar Payment Bridge System (APBS). This has been made mandatory with effect from 1st January 2024. Payment of wages through Direct Benefit Transfer (DBT) mode has had positive impact on the livelihood of the beneficiaries as it ensures that the payment reaches directly into the accounts of the intended beneficiaries. Currently, against total of 13.55 crore active workers Aadhaar seeding of 99.49% have already been completed. State/UTs are continuously being monitored by the Central Government for achieving 100% Aadhaar Seeding and APBS conversion in NREGASoft. As and when any issue is flagged by the State/UT or any other stakeholders, same is resolved on priority basis.",
+            "As per section 6(1) of Mahatma Gandhi NREGA, the Central Government may, by notification, specify the wage rate for unskilled work for Mahatma Gandhi NREGS workers. Accordingly, the Ministry of Rural Development notifies wage rate for unskilled workers under Mahatma Gandhi NREGA every financial year. To compensate the Mahatma Gandhi National Rural Employment Guarantee Scheme (Mahatma Gandhi NREGS) workers against inflation, the Ministry of Rural Development revises the wage rates every financial year based on Consumer Price Index for Agricultural Labourer (CPI-AL). The wage rate is made applicable from 1st April of each financial year. There is around 7% increase in the average notified wage rate during the FY 2024-25 compared to FY 2023-24.",
+            "Each State/UT can provide wages over and above the wage rate notified by the Central Government.    In order to ensure transparency and accountability in the implementation of Mahatma Gandhi National Rural Employment Guarantee Scheme (Mahatma Gandhi NREGS), the Ministry has decided that States/UTs shall ensure capturing of attendance at the worksite through National Mobile Monitoring System (NMMS) App with two-time stamped, geo-tagged photographs of the workers in a day for all the works (except Individual Beneficiary Work) through NMMS w.e.f 1st January, 2023."
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "reason": "Source redirected outside policy or returned insufficient text."
+        }
+      ]
+    },
+    {
+      "id": "pmjdy-account-features",
+      "account": 4,
+      "latencyMs": 4321,
+      "sourceCount": 3,
+      "failureCount": 0,
+      "evidenceFound": false,
+      "sources": [
+        {
+          "host": "pmjdy.gov.in",
+          "title": "Pradhan Mantri Jan-Dhan Yojana | Department of Financial Services | Ministry of Finance",
+          "excerpts": [
+            "Pradhan Mantri Jan-Dhan Yojana (PMJDY) is National Mission for Financial Inclusion to ensure access to financial services, namely, a basic savings & deposit accounts, remittance, credit, insurance, pension in an affordable manner. Under the scheme, a basic savings bank deposit (BSBD) account can be opened in any bank branch or Business Correspondent (Bank Mitra) outlet, by persons not having any other account."
+          ]
+        },
+        {
+          "host": "www.myscheme.gov.in",
+          "title": "https://www.myscheme.gov.in/schemes/pmjdy",
+          "excerpts": []
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY) — National Mission for Financial Inclusion — completes 11 years of transformative impact",
+          "excerpts": [
+            "“With the support of all stake-holders, banks, insurance companies and state Governments, we are moving towards a more financially inclusive society and PMJDY would always be remembered as a game changer for financial inclusion in the country. Pradhan Mantri Jan Dhan Yojana not only serves as an important example of Governance in Mission Mode but also demonstrates what a Government can achieve if it is committed to the welfare of the people,” Sh. Pankaj Chaudhary said.",
+            "PMJDY accounts have also played a pivotal role in extending life and accident insurance to millions of workers in the unorganized sector, through schemes like Jan Suraksha Schemes- Pradhan Mantri Jeevan Jyoti Bima Yojana and Pradhan Mantri Suraksha Bima Yojana.",
+            "Total deposit balances under Pradhan Mantri Jan Dhan Yojana (PMJDY) accounts have reached ₹2,67,756 crore. While the number of accounts has increased three-fold, the total deposits have grown by approximately 12 times. (Aug’25 / Aug’15)"
+          ]
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "finishedAt": "2026-10-17T16:35:16.126Z"
+}

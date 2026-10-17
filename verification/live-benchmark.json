@@ -1,0 +1,218 @@
+{
+  "startedAt": "2026-10-17T16:27:05.215Z",
+  "caveat": "Small live diagnostic only. Expected facts were declared before calls; retrieval of expected text is not a calibrated accuracy or semantic-correctness score.",
+  "cases": [
+    {
+      "id": "pmjdy-launch-date",
+      "account": 1,
+      "status": "COMPLETED",
+      "latencyMs": 8871,
+      "searchRequests": 1,
+      "fetchedUrls": 3,
+      "sourceCount": 3,
+      "failureCount": 0,
+      "allSourcesOnInstitutionalAllowlist": true,
+      "expectedEvidenceFound": false,
+      "sources": [
+        {
+          "host": "www.pib.gov.in",
+          "title": "PIB Backgrounder",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes eight years of successful implementation",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan-Dhan Yojana (PMJDY) - National Mission for Financial Inclusion, completes seven years of successful implementation",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        }
+      ],
+      "failures": []
+    },
+    {
+      "id": "mgnrega-budget-estimate",
+      "account": 2,
+      "status": "COMPLETED",
+      "latencyMs": 5112,
+      "searchRequests": 1,
+      "fetchedUrls": 3,
+      "sourceCount": 2,
+      "failureCount": 1,
+      "allSourcesOnInstitutionalAllowlist": true,
+      "expectedEvidenceFound": true,
+      "sources": [
+        {
+          "host": "www.pib.gov.in",
+          "title": "BUDGET ALLOCATION UNDER MGNREGA",
+          "expectedTextFound": true,
+          "excerptCount": 3
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Fund for Mahatma Gandhi National Rural Employment Guarantee Scheme",
+          "expectedTextFound": true,
+          "excerptCount": 3
+        }
+      ],
+      "failures": [
+        {
+          "reason": "Source redirected outside policy or returned insufficient text."
+        }
+      ]
+    },
+    {
+      "id": "mgnrega-release-as-of-date",
+      "account": 3,
+      "status": "COMPLETED",
+      "latencyMs": 32344,
+      "searchRequests": 1,
+      "fetchedUrls": 3,
+      "sourceCount": 2,
+      "failureCount": 1,
+      "allSourcesOnInstitutionalAllowlist": true,
+      "expectedEvidenceFound": false,
+      "sources": [
+        {
+          "host": "www.pib.gov.in",
+          "title": "Budgetary allocations for the Mahatma Gandhi National Rural Employment Guarantee Scheme",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Aadhaar Based Payment Systems under Mahatma Gandhi National Rural Employment Guarantee Scheme ",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        }
+      ],
+      "failures": [
+        {
+          "reason": "Source redirected outside policy or returned insufficient text."
+        }
+      ]
+    },
+    {
+      "id": "pmjdy-account-features",
+      "account": 4,
+      "status": "COMPLETED",
+      "latencyMs": 6395,
+      "searchRequests": 1,
+      "fetchedUrls": 3,
+      "sourceCount": 3,
+      "failureCount": 0,
+      "allSourcesOnInstitutionalAllowlist": true,
+      "expectedEvidenceFound": false,
+      "sources": [
+        {
+          "host": "pmjdy.gov.in",
+          "title": "Pradhan Mantri Jan-Dhan Yojana | Department of Financial Services | Ministry of Finance",
+          "expectedTextFound": false,
+          "excerptCount": 1
+        },
+        {
+          "host": "www.myscheme.gov.in",
+          "title": "https://www.myscheme.gov.in/schemes/pmjdy",
+          "expectedTextFound": false,
+          "excerptCount": 0
+        },
+        {
+          "host": "www.pib.gov.in",
+          "title": "Pradhan Mantri Jan Dhan Yojana (PMJDY) — National Mission for Financial Inclusion — completes 11 years of transformative impact",
+          "expectedTextFound": false,
+          "excerptCount": 3
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "research": {
+    "status": "COMPLETED",
+    "runId": "01a14ab1-080c-7655-9d94-b21fa5329e56",
+    "elapsedMs": 326409,
+    "iterations": 12,
+    "reportLength": 21338,
+    "hasLaunchDate": true,
+    "hasAccountFeatures": true,
+    "citationCount": 23,
+    "citations": [
+      "pmjdy.gov.in",
+      "pmjdy.gov.in",
+      "financialservices.gov.in",
+      "www.pib.gov.in",
+      "www.pib.gov.in",
+      "www.pib.gov.in",
+      "pmjdy.gov.in",
+      "pmjdy.gov.in",
+      "static.pib.gov.in",
+      "www.pib.gov.in",
+      "bengaluruurban.nic.in",
+      "www.pib.gov.in",
+      "www.pib.gov.in",
+      "www.pib.gov.in",
+      "www.pib.gov.in",
+      "pmjdy.gov.in",
+      "www.pib.gov.in",
+      "slbcne.nic.in",
+      "globalallianceagainsthungerandpoverty.org",
+      "dea.gov.in",
+      "financialservices.gov.in",
+      "static.pib.gov.in",
+      "factly.in"
+    ],
+    "error": null,
+    "citationAudit": {
+      "governmentDomainEntries": 21,
+      "nonGovernmentEntries": 2,
+      "nonGovernmentHosts": [
+        "globalallianceagainsthungerandpoverty.org",
+        "factly.in"
+      ],
+      "claimLevelSupportReview": "NOT_DONE"
+    }
+  },
+  "finishedAt": "2026-10-17T16:33:24.348Z",
+  "summary": {
+    "completedNormalCases": 4,
+    "initialAutomatedMatcherMatches": 1,
+    "manuallyReviewedExpectedEvidenceCasesPassed": 2,
+    "manuallyReviewedExcerptCoverageRate": 0.5,
+    "manualReview": [
+      {
+        "id": "pmjdy-launch-date",
+        "result": "PASS",
+        "reason": "The excerpt says 'Launched on August 28, 2014'; initial regex only accepted day-first order."
+      },
+      {
+        "id": "mgnrega-budget-estimate",
+        "result": "PASS",
+        "reason": "The expected 86,000 crore Budget Estimate appeared in the selected excerpts."
+      },
+      {
+        "id": "mgnrega-release-as-of-date",
+        "result": "MISS",
+        "reason": "The relevant source was returned, but the 82,421.05 crore table row did not appear in excerpts."
+      },
+      {
+        "id": "pmjdy-account-features",
+        "result": "MISS",
+        "reason": "The expected zero-balance, RuPay, and overdraft details did not appear together in excerpts."
+      }
+    ],
+    "institutionalSourceCases": 4,
+    "totalSources": 10,
+    "totalFetchFailures": 2,
+    "normalLatencyMs": [
+      8871,
+      5112,
+      32344,
+      6395
+    ],
+    "note": "Excerpt coverage after manual review, not answer accuracy; see normal-benchmark-recheck.json for the inspected excerpts."
+  }
+}
