@@ -7,7 +7,7 @@ This is a controlled, shared hackathon demo, not a multi-user service. Everyone 
 | Variable | Required value or purpose |
 | --- | --- |
 | `NODE_ENV` | `production`; binds `0.0.0.0` and enables the access gate. |
-| `PORT` | Railway-provided listening port; do not copy the local `.env` port. |
+| `PORT` | `8080` for this deployment, matching the generated domain's target port; the application reads it from the environment. |
 | `RAILWAY_PUBLIC_DOMAIN` | Railway-provided generated public hostname. Used as the exact HTTPS origin. |
 | `APP_ORIGIN` | Optional explicit HTTPS origin; overrides `RAILWAY_PUBLIC_DOMAIN` for a custom domain. No path, wildcard, query, or credentials. |
 | `DEMO_ACCESS_PASSWORD` | Random shared demo password, at least 24 characters. Keep private. Changing it invalidates existing sessions. |
