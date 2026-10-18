@@ -25,7 +25,7 @@ function send(res,status,data){res.writeHead(status,{'Content-Type':'application
 async function body(req){return JSON.parse(await readBody(req)||'{}');}
 const server=http.createServer(async(req,res)=>{
   res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','no-referrer');
-  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'");
+  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'");
   res.setHeader('Cache-Control','no-store');
   res.setHeader('X-Frame-Options','DENY');
   if(config.production) res.setHeader('Strict-Transport-Security','max-age=31536000');
@@ -38,7 +38,7 @@ const server=http.createServer(async(req,res)=>{
     if(config.production && !['GET','HEAD'].includes(req.method) && !config.origins.has(req.headers.origin))return send(res,403,{error:'Same-origin request required.'});
     if(config.production && url.pathname==='/login.css' && req.method==='GET'){res.setHeader('Content-Type','text/css');return res.end(loginCSS);}
     if(config.production && url.pathname==='/login'){
-      if(req.method==='GET'){res.setHeader('Content-Type','text/html; charset=utf-8');return res.end(loginPage);}
+      if(req.method==='GET'){res.setHeader('Referrer-Policy','same-origin');res.setHeader('Content-Type','text/html; charset=utf-8');return res.end(loginPage);}
       if(req.method!=='POST')return send(res,405,{error:'Method not allowed.'});
       if(!loginLimit.allow()){res.setHeader('Retry-After','60');return send(res,429,{error:'Too many sign-in attempts. Try again in a minute.'});}
       if(!String(req.headers['content-type']).startsWith('application/x-www-form-urlencoded'))return send(res,415,{error:'Form required.'});

@@ -49,5 +49,6 @@ if(process.argv.includes('--normal')) {
 const history=(await check('Authenticated shared history','/api/history',200,{headers})).json();
 report.historyIds=history.map(row=>row.id);
 if(report.normal)assert.ok(report.historyIds.includes(report.normal.id));
-await fs.writeFile(new URL('./deployment-smoke.json',import.meta.url),JSON.stringify(report,null,2));
+await fs.mkdir(new URL('../.data/',import.meta.url),{recursive:true});
+await fs.writeFile(new URL('../.data/deployment-smoke.json',import.meta.url),JSON.stringify(report,null,2));
 console.log(JSON.stringify({...report,normal:report.normal?{...report.normal,sources:report.normal.sources.map(s=>({url:s.url,title:s.title,excerptCount:s.excerpts.length}))}:undefined},null,2));
