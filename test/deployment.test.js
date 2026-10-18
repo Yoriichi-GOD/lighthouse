@@ -73,6 +73,8 @@ test('production HTTP access, lifecycle, persistence and rate limits (mock TinyF
     assert.equal(calls.length,0);
   });
   await t.test('login requires origin and correct secret; cookie has security flags',async()=>{
+    const background=await send('/login-background.png');assert.equal(background.status,200);assert.equal(background.headers['content-type'],'image/png');
+    assert.equal((await send('/login-background.png/../.env')).status,303);
     const page=await send('/login');assert.equal(page.headers['referrer-policy'],'same-origin');
     const login={method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({password}).toString()};
     assert.equal((await send('/login',login)).status,403);

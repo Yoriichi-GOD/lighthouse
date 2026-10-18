@@ -36,6 +36,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.headers.origin && !config.origins.has(req.headers.origin))return send(res,403,{error:'Origin rejected.'});
     if(req.method==='GET' && url.pathname==='/health')return send(res,200,{status:'ok'});
     if(config.production && !['GET','HEAD'].includes(req.method) && !config.origins.has(req.headers.origin))return send(res,403,{error:'Same-origin request required.'});
+    if(config.production && url.pathname==='/login-background.png' && req.method==='GET'){res.setHeader('Content-Type','image/png');res.setHeader('Cache-Control','public, max-age=3600');return res.end(await fs.readFile(new URL('../ui/Aurora Lighthouse Over Tranquil Seas.png',import.meta.url)));}
     if(config.production && url.pathname==='/login.css' && req.method==='GET'){res.setHeader('Content-Type','text/css');return res.end(loginCSS);}
     if(config.production && url.pathname==='/login'){
       if(req.method==='GET'){res.setHeader('Referrer-Policy','same-origin');res.setHeader('Content-Type','text/html; charset=utf-8');return res.end(loginPage);}
