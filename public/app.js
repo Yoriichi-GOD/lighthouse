@@ -57,15 +57,44 @@ function setActiveAccountOption(index) {
   accountPickerButton.setAttribute('aria-activedescendant', options[activeAccountOption].id);
   options[activeAccountOption].scrollIntoView({ block: 'nearest' });
 }
+function positionAccountPickerMenu() {
+  if (!accountPickerMenu.classList.contains('is-portaled')) return;
+  const anchor = accountPickerButton.getBoundingClientRect();
+  const edge = 8;
+  const gap = 8;
+  const width = Math.min(anchor.width, window.innerWidth - edge * 2);
+  const maxHeight = Math.min(240, window.innerHeight * .4);
+  const spaceBelow = Math.max(0, window.innerHeight - anchor.bottom - gap - edge);
+  const spaceAbove = Math.max(0, anchor.top - gap - edge);
+  const opensAbove = spaceBelow < Math.min(maxHeight, 140) && spaceAbove > spaceBelow;
+  const availableHeight = opensAbove ? spaceAbove : spaceBelow;
+  const left = Math.min(Math.max(edge, anchor.left), window.innerWidth - width - edge);
+
+  accountPickerMenu.style.left = `${left}px`;
+  accountPickerMenu.style.width = `${width}px`;
+  accountPickerMenu.style.top = opensAbove ? 'auto' : `${anchor.bottom + gap}px`;
+  accountPickerMenu.style.bottom = opensAbove ? `${window.innerHeight - anchor.top + gap}px` : 'auto';
+  accountPickerMenu.style.maxHeight = `${Math.max(48, Math.min(maxHeight, availableHeight))}px`;
+}
 function openAccountPicker(index) {
   if (accountPickerButton.disabled) return;
+  accountPickerMenu.classList.add('is-portaled');
+  document.body.append(accountPickerMenu);
   accountPickerMenu.hidden = false;
+  positionAccountPickerMenu();
+  window.addEventListener('resize', positionAccountPickerMenu);
+  document.addEventListener('scroll', positionAccountPickerMenu, true);
   accountPickerButton.setAttribute('aria-expanded', 'true');
   const selectedIndex = [...accountSelect.options].findIndex(option => option.value === accountSelect.value);
   setActiveAccountOption(index ?? (selectedIndex >= 0 ? selectedIndex : 0));
 }
 function closeAccountPicker(returnFocus = false) {
   accountPickerMenu.hidden = true;
+  window.removeEventListener('resize', positionAccountPickerMenu);
+  document.removeEventListener('scroll', positionAccountPickerMenu, true);
+  accountPickerMenu.classList.remove('is-portaled');
+  accountPickerMenu.removeAttribute('style');
+  accountPicker.append(accountPickerMenu);
   accountPickerButton.setAttribute('aria-expanded', 'false');
   accountPickerButton.removeAttribute('aria-activedescendant');
   accountPickerMenu.querySelectorAll('[role="option"]').forEach(option => { delete option.dataset.active; });
@@ -132,7 +161,7 @@ function initAccountPicker() {
     if (option) setActiveAccountOption(Number(option.dataset.index));
   });
   document.addEventListener('pointerdown', event => {
-    if (!accountPicker.contains(event.target)) closeAccountPicker();
+    if (!accountPicker.contains(event.target) && !accountPickerMenu.contains(event.target)) closeAccountPicker();
   });
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && accountPickerButton.getAttribute('aria-expanded') === 'true') closeAccountPicker();
