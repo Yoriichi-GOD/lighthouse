@@ -454,7 +454,7 @@ function init() {
   el('close-result').addEventListener('click', () => { el('result-section').hidden = true; state.activeRow = null; });
   el('limit-info').addEventListener('click', () => { el('limit-scope').textContent = state.config?.usageScope || 'Usage from this local install only.'; });
   setMode(state.mode === 'research' ? 'research' : 'normal');
-  api('/api/config').then(config => { state.config = config; renderAccounts(); return refreshHistory(); }).then(() => {
+  api('/api/config').then(config => { state.config = config; if (config.hosted) { document.querySelector('.local-pill').lastChild.textContent = ' Shared demo history'; document.querySelector('.history-local').textContent = 'Saved on the demo server'; document.querySelector('.welcome-copy').textContent = 'Choose a quick source check or let Research take the longer route. Questions go to TinyFish; results and history are shared with the demo team.'; } renderAccounts(); return refreshHistory(); }).then(() => {
     for (const row of state.history) if (row.mode === 'research' && ['STARTING', 'QUEUED', 'RUNNING'].includes(row.status)) schedulePoll(row.id, 1500);
   }).catch(error => { showError(`Lighthouse could not load. ${error.message}`); });
 }

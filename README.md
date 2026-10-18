@@ -15,7 +15,7 @@ Requirements: Node.js 22.12 or newer.
 2. Set `TINYFISH_TEAM_1_KEY` through `TINYFISH_TEAM_4_KEY` to the four team API keys. Keep `.env` private; it is ignored by Git.
 3. Run `npm start` and open `http://127.0.0.1:5175`.
 
-The server binds only to loopback. API keys stay in the server process and are never sent to browser JavaScript. The app does not rotate or fall back to another key if one is rejected or reaches an allowance.
+Local mode binds only to loopback. Production mode supports a protected Railway deployment; see [DEPLOYMENT.md](DEPLOYMENT.md) for variables, access limits, volume setup, and redeployment. API keys stay in the server process and are never sent to browser JavaScript. The app does not rotate or fall back to another key if one is rejected or reaches an allowance.
 
 ## TinyFish allowances
 
